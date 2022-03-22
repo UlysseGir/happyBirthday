@@ -37,7 +37,13 @@ function hobbies() {
 }
 //console.log(hobbies())
 
-function birthday(){}
+function birthday(){
+    let years = Math.floor(Math.random() * 30) + 1960;
+    let months = Math.floor(Math.random() * 12) + 1;
+    let days = Math.floor(Math.random() * 31) + 1;
+    return days + "/" + months + "/" + years;
+}
+console.log(birthday());
 
 let user = []; //
 for(let i=0; i < 50; i++){
