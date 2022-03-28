@@ -43,7 +43,13 @@ function birthday(){
     let days = Math.floor(Math.random() * 31) + 1;
     return days + "/" + months + "/" + years;
 }
-console.log(birthday());
+
+function regist(){
+    let years = Math.floor(Math.random() * 2) + 2020;
+    let months = Math.floor(Math.random() * 12) + 1;
+    let days = Math.floor(Math.random() * 31) + 1;
+    return days + "/" + months + "/" + years;
+}
 
 let user = []; //
 for(let i=0; i < 50; i++){
@@ -51,6 +57,8 @@ for(let i=0; i < 50; i++){
         username: username[Math.floor(Math.random() * username.length)],
         id: uuidv4(),
         hobby: hobbies(),
+        birthday: birthday(),
+        regist: regist(),
     }
     user.push(tmp);
 }
